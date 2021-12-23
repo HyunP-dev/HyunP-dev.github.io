@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            border: none;
+        }
+
+        .menu {
+            float: left;
+            width: 16rem;
+            height: 100vh;
+        }
+
+        .main {
+            float: left;
+            width: calc(100% - 16rem - 8px);
+            height: 100vh;
+            overflow: scroll;
+            position: absolute;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>
-        Welcome to my homepage!
-    </h1>
+    <iframe class="menu" src="menu.html"></iframe>
+    <iframe class="main" src="main.html"></iframe>
     
 </body>
+
 </html>
