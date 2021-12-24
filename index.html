@@ -27,12 +27,30 @@
             position: absolute;
         }
     </style>
+
+    <script>
+        let mainFrame = null;
+        window.onload = () => {
+            mainFrame = document.querySelector(".main");
+        }
+
+        window.addEventListener('message', function (e) {
+            switch(e.data.value){
+                case "welcome":
+                    mainFrame.src = "main.html";
+                    break;
+                case "github":
+                    location.href = "https://github.com/HyunP-dev";
+                    break;
+            }
+        });
+    </script>
 </head>
 
 <body>
     <iframe class="menu" src="menu.html"></iframe>
     <iframe class="main" src="main.html"></iframe>
-    
+
 </body>
 
 </html>

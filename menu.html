@@ -8,9 +8,24 @@
     <title>Document</title>
 
     <style>
-        img.profile-img{
+        img.profile-img {
             width: 80%;
             border: 1px solid black;
+        }
+
+        input[type="checkbox"]:checked~ul {
+            display: none;
+        }
+
+        .treeview>li>input {
+            display: none;
+        }
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
     </style>
 
@@ -32,7 +47,7 @@
             <br>
             <center>
                 <b>Park Hyun (<span class="age"></span>)</b><br>
-                
+
                 <font size="2">« Stundent »</font><br>
             </center>
             <br>
@@ -40,8 +55,17 @@
         </div>
     </header>
     <hr>
-    <br>
-    
+    <ul class="treeview">
+        <li><a href="javascript:window.parent.postMessage({value: 'welcome'})">처음으로</a></li>
+        <li><a href="javascript:window.parent.postMessage({value: 'github'})">깃허브</a></li>
+        <li>
+            <input type="checkbox" id="postsCheckbox" checked="true">
+            <label for="postsCheckbox">게시글</label>
+            <ul>
+                <li>준비 중...</li>
+            </ul>
+        </li>
+    </ul>
 </body>
 
 </html>
